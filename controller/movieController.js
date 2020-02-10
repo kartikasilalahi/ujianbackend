@@ -130,6 +130,7 @@ module.exports = {
             res.status(200).send(result)
         })
     },
+
     deleteMovCat: (req, res) => {
         let sql = `DELETE FROM movcat WHERE id = ${req.params.id};`
         db.query(sql, (err, results) => {

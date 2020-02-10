@@ -24,6 +24,6 @@ router.delete('/delete-category/:idcategory', movieController.deleteCategory)
 // ========================
 router.post('/add-movcat', movieController.addMovCat)
 router.get('/get-movcat', movieController.getMovCat)
-router.delete('/delete-movcat/:id', movieController.deleteMovCat)
+router.delete('/delete-movcat', movieController.deleteMovCat)
 
 module.exports = router

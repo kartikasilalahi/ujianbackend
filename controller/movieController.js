@@ -132,7 +132,8 @@ module.exports = {
     },
 
     deleteMovCat: (req, res) => {
-        let sql = `DELETE FROM movcat WHERE id = ${req.params.id};`
+        const { idcategory, idmovie } = req.body
+        let sql = `DELETE FROM movcat WHERE idmovie=${idmovie} AND idcategory=${idcategory};`
         db.query(sql, (err, results) => {
             if (err) return res.status(500).send(err)
             res.status(200).send(results)
